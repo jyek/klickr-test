@@ -36,8 +36,8 @@
   var send = function(output){
     jQuery.ajax({
       type: "POST",
-      url: server + '/keystrokes',
-      data: JSON.stringify(output),
+      url: server + '/klicks',
+      data: JSON.stringify({klicks: output}),
       contentType: 'application/json',
       success: function(data) {
         console.log('Ajax: Success');
